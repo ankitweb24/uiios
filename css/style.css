@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+/* this is the navbar style */
+
+.navbar {
+    background-color: #000000c0;
+}
+
+
+/* the main header_set style */
+
+.header_set {
+    width: 100%;
+    border: 1px solid #000000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* the logo degines */
+
+.navbar-brand {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgb(0, 0, 0, .4);
+    font-size: 1.6rem!important;
+    border-bottom: 1px solid #84866c94;
+}
+
+.navbar-brand .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* click menu degines */
+
+.bars_style {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1px 16px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.651), inset -1px -2px 10px rgba(255, 238, 238, 0.932);
+    border-radius: 20px;
+    transition-duration: 200px;
+    position: fixed;
+    right: 50px;
+    top: 10px;
+    z-index: 998;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.bars_style:active {
+    box-shadow: none;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(68, 78, 177, 0.555);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    /* using the flex box in advanced css */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    margin: 2px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidenav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 40px;
+    transition-duration: 500ms;
+}
+
+.sidenav a:hover::before {
+    border-bottom: 1px solid #ffffff;
+    width: 10%;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 46px;
+    margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    height: 90vh;
+    background-color: #000000d2!important;
+    border-radius: 0!important;
+    border: none!important;
+}
+
+
+/* this is the slider effect style */
+
+.slider_effect {
+    position: relative;
+    bottom: 50px;
+    width: 10%;
+    left: 50px;
+}
+
+.slider_effect a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.img-carso {
+    position: absolute;
+    top: 70px;
+    width: 310px;
+    left: 12%;
+}
+
+
+/* this is the second row style */
+
+.frist_row {
+    margin-top: 30px;
+    height: 70vh;
+}
+
+.second_row {
+    margin-top: 30px;
+    height: 70vh;
+    position: relative;
+}
+
+
+/* card section */
+
+.crd_implementations {
+    width: 100%;
+    height: 100vh;
+    background-color: #181111c0;
+    overflow: hidden;
+}
+
+.crd_implementations h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+    position: relative;
+}
+
+.crd_implementations h2::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 53px;
+    transition-duration: 500ms;
+}
+
+.crd_implementations h2:hover::before {
+    width: 35%;
+    border-bottom: 1px solid #ccc9c946;
+}
+
+
+/* style the second row h2 */
+
+.second_row h2 {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 3rem;
+    font-weight: lighter;
+    cursor: pointer;
+    color: #d9d9d9!important;
+}
+
+.second_row h2::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 63px;
+    transition-duration: 1000ms;
+}
+
+.second_row h2:hover::before {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.second_row p {
+    position: absolute;
+    top: 23%;
+    left: 20px;
+    color: #cac6c6!important;
+}
+
+
+/* style of the selection code any content */
+
+::selection {
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+
+.heart_st {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    text-align: right;
+}
+
+.fa-heart {
+    font-size: 2rem;
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+    font-weight: lighter;
+    transition-duration: 500ms;
+}
+
+.fa-heart:hover {
+    color: rgb(240, 195, 71)!important;
+}
+
+.buttons {
+    position: relative;
+    top: 56%;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px 30px;
+}
+
+.buttons span a {
+    border: 2px solid rgb(190, 181, 181);
+    margin: 0 17px;
+    padding: 11px 60px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: #ccc2c2;
+    text-decoration: none;
+    transition-duration: 400ms;
+}
+
+.buttons span a:hover {
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px #fff;
+    color: #fff;
+}
+
+.second_row .feedbacksection {
+    position: relative;
+    top: 63%;
+    width: 100%;
+    height: 15vh;
+}
+
+.second_row .feedbacksection h4 {
+    margin: 14px 10px;
+    font-weight: lighter;
+    color: #d9d9dd!important;
+    letter-spacing: 2px;
+}
+
+.second_row .feedbacksection span i {
+    position: relative;
+    left: 26%;
+    transform: translateX(-50%);
+    margin: 10px 5px;
+    font-size: 1.5rem;
+    color: rgb(255, 174, 0)!important;
+}
+
+.second_row .feedbacksection span i:hover {
+    color: rgb(255, 196, 0)!important;
+}
+
+.box {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    transition-duration: 600ms;
+    cursor: pointer;
+    /* border: .1px solid #d9d9d94b; */
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(240, 233, 233, 0.459);
+    transform: translateY(-20px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 70vh;
+    background-color: rgba(68, 177, 172, 0.555);
+    transition-duration: 600ms;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.box:hover::before {
+    width: 100%;
+}
+
+.box img {
+    width: 400px;
+    height: 280px;
+}
+
+
+/* .box:hover .actcenter {
+    transform: translateY(-20px);
+} */
+
+.box h3 {
+    font-weight: lighter;
+    color: #d9d9d9!important;
+}
+
+.box p {
+    color: #d9d9d9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box a {
+    width: 60%;
+    border: 3px solid rgba(255, 255, 255, 0.342);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.342);
+    text-decoration: none;
+    border-radius: 30px;
+    transition-duration: 500ms;
+}
+
+.box a:hover {
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+.clint_details {
+    width: 100%;
+    height: 70vh;
+    background-color: #181111c0;
+    overflow: hidden;
+}
+
+.clint_details h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+    position: relative;
+}
+
+.clint_details h2::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 53px;
+    transition-duration: 500ms;
+}
+
+.clint_details h2:hover::before {
+    width: 35%;
+    border-bottom: 1px solid #ccc9c946;
+}
+
+
+/* this is the counter part */
+
+.cntr_part {
+    width: 100%;
+    height: 20vh;
+    background-color: #000000c0;
+    overflow: hidden;
+}
+
+.count {
+    font-weight: lighter;
+    color: #d9d9d9!important;
+}
+
+
+/* .f_c {
+    border: 1px solid #fff;
+} */
+
+.s_c p {
+    color: #d9d9d9;
+    margin-right: 30px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.cntroom {
+    width: 100%;
+    height: 80vh;
+    background-color: #181111c0;
+    overflow: hidden;
+}
+
+.cntroom h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+    position: relative;
+}
+
+.cntroom h2::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 53px;
+    transition-duration: 500ms;
+}
+
+.cntroom h2:hover::before {
+    width: 35%;
+    border-bottom: 1px solid #ccc9c946;
+}
+
+.input_root {
+    position: relative;
+    left: 50%;
+    top: -24px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    width: 40%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #d9d9d983;
+    color: #faf1f1;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 10px 0;
+}
+
+::placeholder {
+    color: rgb(209, 196, 196);
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.btn_submit input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 9px 50px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 3px solid #d9d9d98a;
+    color: #d9d9d98a;
+    text-transform: uppercase;
+    outline: none;
+    transition-duration: 500ms;
+    width: 20%;
+    text-align: center;
+}
+
+.btn_submit input:hover {
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+
+/* footer */
+
+.ft_s {
+    width: 100%;
+    height: 55vh;
+    background-color: #000000c0;
+    overflow: hidden;
+}
+
+.ft_s h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+    position: relative;
+}
+
+.ft_s h2::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 53px;
+    transition-duration: 500ms;
+}
+
+.ft_s h2:hover::before {
+    width: 35%;
+    border-bottom: 1px solid #ccc9c946;
+}
+
+.social_icons {
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+.social_icons a {
+    margin: 0 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.social_icons a:hover {
+    color: #d9d9d9;
+}
+
+
+/* .inseto {
+    border: 1px solid #fff
+} */
+
+.inset {
+    width: 120%;
+    padding: 4px 30px;
+    position: relative;
+    left: -5%;
+    border: none;
+    outline: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.cld {
+    padding: 4px 0;
+    position: relative;
+    left: 0px;
+    width: 100%;
+    border: navajowhite;
+    outline: none;
+    background-color: #fff;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.cld:hover {
+    box-shadow: 0 0 20px rgb(0, 0, 0, .4);
+}
+
+.scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid #fff; */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: -1px -2px 20px rgb(255, 255, 255);
+    cursor: pointer;
+    transition-duration: 600ms;
+}
+
+.scrolltop:hover {
+    box-shadow: none;
+}
+
+.fix_attch {
+    width: 100%;
+    height: 30vh;
+    background-image: linear-gradient(to right, rgba(30, 30, 68, 0.527), rgba(242, 94, 255, 0.473)), url(../images/cloud\ datadd.png);
+    background-attachment: fixed;
+}
+
+
+/* main media queries */
+
+@media(max-width:768px) {
+    .bars_style {
+        right: 20px;
+    }
+    .slider_effect {
+        width: 15%;
+    }
+    .slider_effect a {
+        font-size: 1.5rem;
+    }
+    .img-carso {
+        position: absolute;
+        top: 30px;
+        width: 250px;
+        left: 53%;
+        transform: translateX(-50%);
+    }
+    .header_set {
+        height: auto;
+    }
+    .card {
+        height: auto;
+    }
+    .frist_row {
+        height: 45vh;
+    }
+    .second_row {
+        height: 100vh;
+    }
+    .second_row h2 {
+        top: 10px;
+    }
+    .heart_st {
+        top: 38%;
+    }
+    .buttons {
+        top: 47%;
+    }
+    .second_row p {
+        top: 14%;
+    }
+    .buttons span a {
+        margin: 4px 3px;
+        padding: 11px 30px;
+        font-size: 1rem;
+    }
+    .second_row .feedbacksection {
+        top: 53%;
+    }
+    .crd_implementations h2 {
+        font-size: 2.2rem;
+    }
+    .crd_implementations {
+        height: auto;
+    }
+    .box img {
+        width: 300px;
+        height: 280px;
+    }
+    .clint_details h2 {
+        font-size: 2.2rem;
+    }
+    .clint_details {
+        height: auto;
+    }
+    .s_c p {
+        text-align: center!important;
+    }
+    .cntr_part h2 {
+        font-size: 1rem!important;
+    }
+    .input_root {
+        width: 80%;
+    }
+    .btn_submit input {
+        padding: 9px 20px;
+        width: 50%;
+    }
+    .ft_s {
+        height: 80vh;
+    }
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
